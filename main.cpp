@@ -16,13 +16,14 @@ int main(){
 			cin>>Stu[numS];
 			Sum+=Stu[numS];
 		}
-		int ave=Sum/numS; //calculate the average of students in one case
+		float ave=Sum/numS; //calculate the average of students in one case
 
 		for(int j=0;j<numS;j++){ // calculate the average of students whose grade is above average
-			if(Stu[numS]>ave){
+			if(Stu[numS]>ave)
 			Sum++;
-			}
+			
 		}
+		
 		per=Sum/numS;
 		cout<<setprecision(3)<<per<<endl;
 	}
