@@ -2,30 +2,37 @@
 #include <iomanip>
 using namespace std;
 
-int main{
-	int numC; //records the number of cases 
-	int numS=0; //records the number of students in one case
-	float per=0.000; // the percentage of students whose grade is above average, initialed to be 0
+int main(){
+	int numC; //the integer that records the number of cases 
 	cin>> numC;
+
 	for(int i=0;i<numC;i++){
+		int numS; //the integer that records the number of students in one case
+		
+		int Stu[1001];
+		int sum=0; //records sum of grades
+		int num=0; //records students whose grade is above average
+
 		cin>>numS;
-		int Stu[1000];
-		int Sum; //records the number of students whose grade is above average
 
 		for(int j=0;j<numS;j++){ //input all grades of one case
-			cin>>Stu[numS];
-			Sum+=Stu[numS];
+			cin>>Stu[j];
+			sum+=Stu[j];
 		}
 
-		float ave=Sum/numS; //calculate the average of students in one case
+		float ave=sum/numS; //calculate the average of students in one case
 
 		for(int j=0;j<numS;j++){ // calculate the average of students whose grade is above average
-			if(Stu[numS]>ave){
-			Sum++;
-			}
+			if(Stu[j]>ave)
+			num++;
+			
 		}
-		per=Sum/numS;
-		cout<<setprecision(3)<<per<<endl;
+
+		float per=num/numS*100;// the percentage of students whose grade is above average,initialed to be 0
+		cout.setf(ios::fixed);
+		cout<<setprecision(3)<<per*100<<"%"<<endl;
+
+		
 	}
 	return 0;
 }
