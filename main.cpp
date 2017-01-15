@@ -9,7 +9,7 @@ int main(){
 	for(int i=0;i<numC;i++){
 		int numS; //the integer that records the number of students in one case
 		
-		int Stu[1001];
+		int Stu[1001]; // number of students is [0,1000]
 		int sum=0; //records sum of grades
 		int num=0; //records students whose grade is above average
 
