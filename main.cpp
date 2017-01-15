@@ -5,7 +5,7 @@ using namespace std;
 int main{
 	int numC; //records the number of cases 
 	int numS=0; //records the number of students in one case
-	float per=0; // the percentage of students whose grade is above average, initialed to be 0
+	float per=0.000; // the percentage of students whose grade is above average, initialed to be 0
 	cin>> numC;
 	for(int i=0;i<numC;i++){
 		cin>>numS;
