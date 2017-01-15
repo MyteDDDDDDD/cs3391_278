@@ -30,7 +30,7 @@ int main(){
 
 		float per=num/numS*100;// the percentage of students whose grade is above average,initialed to be 0
 		cout.setf(ios::fixed);
-		cout<<setprecision(3)<<per*100<<"%"<<endl;
+		cout<<setprecision(3)<<per<<"%"<<endl;
 
 		
 	}
